@@ -1,3 +1,13 @@
+use clap::Parser;
+
+#[derive(Parser)]
+struct Cli {
+    input: String
+}
+
 fn main() {
-    println!("Hello, world!");
+    let cli = Cli::parse();
+
+    let input_file = cli.input;
+    println!("{}", input_file);
 }
